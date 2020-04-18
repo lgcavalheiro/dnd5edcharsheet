@@ -64,4 +64,11 @@ export class CharAttributesComponent implements OnInit {
     this.attributes[attrib] = numbers.reduce((cur, nex) => { return cur + nex });
   }
 
+  randomizeAll(){
+    let attrs = ['str', 'dex', 'con', 'int', 'wis', 'chr'];
+    for(let attrib of attrs) {
+      this.randomizeAttribute(attrib);
+    }
+  }
+
 }
