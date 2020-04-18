@@ -1,4 +1,12 @@
 <div class="content">
     <app-char-header></app-char-header>
-    <app-char-attributes></app-char-attributes>
+    <div class="cl-3">
+      <div class="cl-auto">
+        <app-char-attributes (sendAttributes)="receiveAttributes($event)"></app-char-attributes>
+        <div>SUB CONTENT A</div>
+      </div>
+      <div>CONTENT - 1</div>
+      <div>CONTENT - 2</div>
+    </div>
+
 </div>

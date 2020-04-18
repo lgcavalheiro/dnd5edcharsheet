@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-char-attributes',
@@ -9,7 +9,7 @@ export class CharAttributesComponent implements OnInit {
 
 
   attributes = {
-    str: 7,
+    str: 10,
     dex: 10,
     con: 10,
     int: 10,
@@ -26,13 +26,20 @@ export class CharAttributesComponent implements OnInit {
       chr: 0
     }
 
+    @Output() attributeEvent = new EventEmitter<object>();
+
     calculateMod(value: number, mod: string) {
       let calc = Math.floor((value/2) - 5);
       this.attribMods[mod] = calc;
+      this.sendAttributes();
       return calc;
     }
 
   constructor() {
+
+   }
+
+  ngOnInit(): void {
     this.attribMods = {
       str: this.calculateMod(this.attributes.str, 'str'),
       dex: this.calculateMod(this.attributes.dex, 'dex'),
@@ -41,10 +48,10 @@ export class CharAttributesComponent implements OnInit {
       wis: this.calculateMod(this.attributes.wis, 'wis'),
       chr: this.calculateMod(this.attributes.chr, 'chr')
     }
-   }
+  }
 
-  ngOnInit(): void {
-
+  sendAttributes() {
+    this.attributeEvent.emit(this.attributes)
   }
 
 }

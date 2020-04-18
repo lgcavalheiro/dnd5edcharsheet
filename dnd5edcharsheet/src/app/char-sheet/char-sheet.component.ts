@@ -10,9 +10,18 @@ import { CharHeaderComponent } from './char-header/char-header.component';
 })
 export class CharSheetComponent implements OnInit {
 
-  constructor() { }
+  attributes: object;
+
+  constructor() {
+
+  }
 
   ngOnInit(): void {
+  }
+
+  receiveAttributes($event) {
+    this.attributes = $event;
+    console.log('ATTRIBS: ', this.attributes);
   }
 
 }
