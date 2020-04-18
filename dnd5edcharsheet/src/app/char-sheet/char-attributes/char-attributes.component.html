@@ -1,0 +1,43 @@
+<div class="sheet-attributes cl-1 rw-6">
+  <div class="rw-3 mx-h">
+    <input [(ngModel)]="attributes.str" type="number" name="char-str" id="char-str" class="char-attr">
+    <label for="char-str">Strength</label>
+    <span>
+      <span *ngIf="calculateMod(attributes.str, 'str') > 0">+</span>
+      {{ attribMods.str }}
+    </span>
+  </div>
+
+  <div class="rw-3 mx-h">
+    <input [(ngModel)]="attributes.dex" type="number" name="char-dex" id="char-dex" class="char-attr">
+    <label for="char-dex">Dexterity</label>
+    <span>
+      <span *ngIf="calculateMod(attributes.dex, 'dex') > 0">+</span>
+      {{ attribMods.dex }}
+    </span>
+  </div>
+
+  <div class="rw-3 mx-h">
+    <input type="number" name="char-con" id="char-con" class="char-attr">
+    <label for="char-con">Constitution</label>
+    <span>+5</span>
+  </div>
+
+  <div class="rw-3">
+    <input type="number" name="char-int" id="char-int" class="char-attr">
+    <label for="char-int">Intelligence</label>
+    <span>+5</span>
+  </div>
+
+  <div class="rw-3">
+    <input type="number" name="char-wis" id="char-wis" class="char-attr">
+    <label for="char-wis">Wisdom</label>
+    <span>+5</span>
+  </div>
+
+  <div class="rw-3">
+    <input type="number" name="char-chr" id="char-chr" class="char-attr">
+    <label for="char-chr">Charisma</label>
+    <span>+5</span>
+  </div>
+</div>
