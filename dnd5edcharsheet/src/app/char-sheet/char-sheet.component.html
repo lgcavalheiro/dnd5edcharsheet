@@ -36,8 +36,8 @@
         <input [(ngModel)]="attributes.str" type="number" name="char-str" id="char-str" class="char-attr">
         <label for="char-str">Strength</label>
         <span>
-          <span *ngIf="calculateMod(attributes.str) > 0">+</span>
-          {{ calculateMod(attributes.str) }}
+          <span *ngIf="calculateMod(attributes.str, 'str') > 0">+</span>
+          {{ attribMods.str }}
         </span>
       </div>
 
@@ -45,8 +45,8 @@
         <input [(ngModel)]="attributes.dex" type="number" name="char-dex" id="char-dex" class="char-attr">
         <label for="char-dex">Dexterity</label>
         <span>
-          <span *ngIf="calculateMod(attributes.dex) > 0">+</span>
-          {{ calculateMod(attributes.dex) }}
+          <span *ngIf="calculateMod(attributes.dex, 'dex') > 0">+</span>
+          {{ attribMods.dex }}
         </span>
       </div>
 
