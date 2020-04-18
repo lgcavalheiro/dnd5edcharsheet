@@ -1,0 +1,47 @@
+.cl-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.rw-3 {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.rw-2 {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.cl-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.rw-1 {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+.cl-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.rw-6 {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.gap-8 {
+  gap: 8px;
+}
+
+.ta-c {
+  text-align: center;
+}
+
+.mx-h {
+  max-height: 64px;
+}
+
