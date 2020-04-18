@@ -1,8 +1,10 @@
 <div class="content">
     <app-char-header></app-char-header>
     <div class="cl-3">
-      <div class="cl-auto">
-        <app-char-attributes (sendAttributes)="receiveAttributes($event)"></app-char-attributes>
+      <div class="cl-a">
+        <app-char-attributes
+          (attributeEvent)="receiveAttributes($event)"
+          (modEvent)="receiveMods($event)"></app-char-attributes>
         <div>SUB CONTENT A</div>
       </div>
       <div>CONTENT - 1</div>

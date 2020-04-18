@@ -1,6 +1,14 @@
-<div class="sheet-attributes cl-1 rw-6">
-  <div class="rw-3 mx-h">
-    <input [(ngModel)]="attributes.str" type="number" name="char-str" id="char-str" class="char-attr">
+<button class="bt-s" (click)="randomizeAttribute('str')">
+          <i class="fas fa-dice"></i>
+        </button>
+    <div class="rw-3 mx-h">
+<div class="cl-1 rw-6">
+    <div class="cl-f">
+      <button class="bt-s" (click)="randomizeAttribute('str')">
+        <i class="fas fa-dice"></i>
+      </button>
+      <input [(ngModel)]="attributes.str" type="number" name="char-str" id="char-str" class="char-attr">
+    </div>
     <label for="char-str">Strength</label>
     <span>
       <span *ngIf="calculateMod(attributes.str, 'str') > 0">+</span>
@@ -9,7 +17,12 @@
   </div>
 
   <div class="rw-3 mx-h">
-    <input [(ngModel)]="attributes.dex" type="number" name="char-dex" id="char-dex" class="char-attr">
+    <div class="cl-f">
+      <button class="bt-s" (click)="randomizeAttribute('dex')">
+        <i class="fas fa-dice"></i>
+      </button>
+      <input [(ngModel)]="attributes.dex" type="number" name="char-dex" id="char-dex" class="char-attr">
+    </div>
     <label for="char-dex">Dexterity</label>
     <span>
       <span *ngIf="calculateMod(attributes.dex, 'dex') > 0">+</span>
@@ -18,26 +31,58 @@
   </div>
 
   <div class="rw-3 mx-h">
-    <input type="number" name="char-con" id="char-con" class="char-attr">
+    <div class="cl-f">
+      <button class="bt-s" (click)="randomizeAttribute('con')">
+        <i class="fas fa-dice"></i>
+      </button>
+      <input [(ngModel)]="attributes.con" type="number" name="char-con" id="char-con" class="char-attr">
+    </div>
     <label for="char-con">Constitution</label>
-    <span>+5</span>
+    <span>
+      <span *ngIf="calculateMod(attributes.con, 'con') > 0">+</span>
+      {{ attribMods.con }}
+    </span>
   </div>
 
-  <div class="rw-3">
-    <input type="number" name="char-int" id="char-int" class="char-attr">
+  <div class="rw-3 mx-h">
+    <div class="cl-f">
+      <button class="bt-s" (click)="randomizeAttribute('int')">
+        <i class="fas fa-dice"></i>
+      </button>
+      <input [(ngModel)]="attributes.int" type="number" name="char-int" id="char-int" class="char-attr">
+    </div>
     <label for="char-int">Intelligence</label>
-    <span>+5</span>
+    <span>
+      <span *ngIf="calculateMod(attributes.int, 'int') > 0">+</span>
+      {{ attribMods.int }}
+    </span>
   </div>
 
-  <div class="rw-3">
-    <input type="number" name="char-wis" id="char-wis" class="char-attr">
+  <div class="rw-3 mx-h">
+    <div class="cl-f">
+      <button class="bt-s" (click)="randomizeAttribute('wis')">
+        <i class="fas fa-dice"></i>
+      </button>
+      <input [(ngModel)]="attributes.wis" type="number" name="char-wis" id="char-wis" class="char-attr">
+    </div>
     <label for="char-wis">Wisdom</label>
-    <span>+5</span>
+    <span>
+      <span *ngIf="calculateMod(attributes.wis, 'wis') > 0">+</span>
+      {{ attribMods.wis }}
+    </span>
   </div>
 
-  <div class="rw-3">
-    <input type="number" name="char-chr" id="char-chr" class="char-attr">
+  <div class="rw-3 mx-h">
+    <div class="cl-f">
+      <button class="bt-s" (click)="randomizeAttribute('chr')">
+        <i class="fas fa-dice"></i>
+      </button>
+      <input [(ngModel)]="attributes.chr" type="number" name="char-chr" id="char-chr" class="char-attr">
+    </div>
     <label for="char-chr">Charisma</label>
-    <span>+5</span>
+    <span>
+      <span *ngIf="calculateMod(attributes.chr, 'chr') > 0">+</span>
+      {{ attribMods.chr }}
+    </span>
   </div>
 </div>

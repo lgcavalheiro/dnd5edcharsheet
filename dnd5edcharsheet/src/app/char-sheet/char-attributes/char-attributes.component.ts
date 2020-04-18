@@ -7,7 +7,6 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class CharAttributesComponent implements OnInit {
 
-
   attributes = {
     str: 10,
     dex: 10,
@@ -27,6 +26,7 @@ export class CharAttributesComponent implements OnInit {
     }
 
     @Output() attributeEvent = new EventEmitter<object>();
+    @Output() modEvent = new EventEmitter<object>();
 
     calculateMod(value: number, mod: string) {
       let calc = Math.floor((value/2) - 5);
@@ -51,7 +51,17 @@ export class CharAttributesComponent implements OnInit {
   }
 
   sendAttributes() {
-    this.attributeEvent.emit(this.attributes)
+    this.attributeEvent.emit(this.attributes);
+    this.modEvent.emit(this.attribMods);
+  }
+
+  randomizeAttribute(attrib: string){
+    let numbers = [1, 1, 1, 1];
+    for (let i in numbers) {
+      numbers[i] = Math.floor(Math.random() * 6)+1;
+    };
+    numbers.sort().shift();
+    this.attributes[attrib] = numbers.reduce((cur, nex) => { return cur + nex });
   }
 
 }

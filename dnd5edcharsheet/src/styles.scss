@@ -1,9 +1,13 @@
-.cl-auto {
+.cl-a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
 }
 
-.rw-auto {
+.cl-f {
+  display: flex;
+}
+
+.rw-a {
   display: grid;
   grid-template-rows: repeat(auto-fit, minmax(3rem, 1fr));
 }
@@ -52,6 +56,11 @@
 }
 
 .mx-h {
-  max-height: 64px;
+  max-height: calc(100% - 8vh);
+}
+
+.bt-s{
+  width: 64px;
+  height: 37px;
 }
 

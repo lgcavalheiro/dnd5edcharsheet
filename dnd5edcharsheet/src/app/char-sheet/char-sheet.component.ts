@@ -11,6 +11,7 @@ import { CharHeaderComponent } from './char-header/char-header.component';
 export class CharSheetComponent implements OnInit {
 
   attributes: object;
+  attribMods: object;
 
   constructor() {
 
@@ -19,9 +20,12 @@ export class CharSheetComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  receiveAttributes($event) {
+  receiveAttributes($event: object) {
     this.attributes = $event;
-    console.log('ATTRIBS: ', this.attributes);
+  }
+
+  receiveMods($event: object) {
+    this.attribMods = $event;
   }
 
 }
