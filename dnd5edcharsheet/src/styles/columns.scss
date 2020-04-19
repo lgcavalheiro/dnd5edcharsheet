@@ -1,0 +1,23 @@
+.cl-a {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+}
+
+.cl-f {
+  display: flex;
+}
+
+.cl-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.cl-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cl-1 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}

@@ -3,13 +3,18 @@
     <input type="text" name="char-name" id="char-name" placeholder="Name thy character">
     <label for="char-name">Character Name</label>
   </div>
-  <div class="rw-a cl-a ta-c">
+  <div class="rw-2 cl-a ta-c">
     <label for="char-class">
-      <input type="text" name="char-class" id="char-class" placeholder="Class & Level">
+      <select id="char-class" class="cb-s">
+        <option *ngFor="let class of classes" value="{{ class.name }}">{{ class.name }}</option>
+      </select>
+      <input type="number" name="char-class" id="char-class" class="char-attr" min="1" max="20" value="1">
       Class & Level
     </label>
     <label for="char-background">
-      <input type="text" name="char-background" id="char-background" placeholder="Background">
+      <select id="char-background" class="cb-m">
+        <option *ngFor="let background of backgrounds" value="{{ background.name }}">{{ background.name }}</option>
+      </select>
       Background
     </label>
     <label for="char-player">
@@ -17,11 +22,15 @@
       Player Name
     </label>
     <label for="char-race">
-      <input type="text" name="char-race" id="char-race" placeholder="Race">
+      <select id="char-race" class="cb-m">
+        <option *ngFor="let race of races" value="{{ race.name }}">{{ race.name }}</option>
+      </select>
       Race
     </label>
     <label for="char-alignment">
-      <input type="text" name="char-alignment" id="char-alignment" placeholder="Alignment">
+      <select id="char-alignment" class="cb-m">
+        <option *ngFor="let alignment of alignments" value="{{ alignment.name }}">{{ alignment.name }}</option>
+      </select>
       Alignment
     </label>
     <label for="char-exp">
