@@ -1,41 +1,60 @@
 <div class="sheet-header rw-1 cl-2">
-  <div class="rw-a ta-c">
+  <div class="rw-2 ta-c">
     <input type="text" name="char-name" id="char-name" placeholder="Name thy character">
     <label for="char-name">Character Name</label>
   </div>
-  <div class="rw-2 cl-a ta-c">
-    <label for="char-class">
-      <select id="char-class" class="cb-s">
-        <option *ngFor="let class of classes" value="{{ class.name }}">{{ class.name }}</option>
-      </select>
-      <input type="number" name="char-class" id="char-class" class="char-attr" min="1" max="20" value="1">
-      Class & Level
-    </label>
-    <label for="char-background">
-      <select id="char-background" class="cb-m">
-        <option *ngFor="let background of backgrounds" value="{{ background.name }}">{{ background.name }}</option>
-      </select>
-      Background
-    </label>
-    <label for="char-player">
-      <input type="text" name="char-player" id="char-player" placeholder="Player name">
-      Player Name
-    </label>
-    <label for="char-race">
-      <select id="char-race" class="cb-m">
-        <option *ngFor="let race of races" value="{{ race.name }}">{{ race.name }}</option>
-      </select>
-      Race
-    </label>
-    <label for="char-alignment">
-      <select id="char-alignment" class="cb-m">
-        <option *ngFor="let alignment of alignments" value="{{ alignment.name }}">{{ alignment.name }}</option>
-      </select>
-      Alignment
-    </label>
-    <label for="char-exp">
-      <input type="text" name="char-exp" id="char-exp" placeholder="Experience Points">
-      Experience Points
-    </label>
+
+  <div class="rw-2 cl-3 ta-c">
+    <div class="rw-2">
+      <div>
+        <select id="char-class" class="cb-s">
+          <option *ngFor="let class of classes" value="{{ class.name }}">{{ class.name }}</option>
+        </select>
+        <input type="number" name="char-class" id="char-class" class="char-attr" min="1" max="20" value="1">
+      </div>
+      <span>Class & Level</span>
+    </div>
+
+    <div class="rw-2">
+      <div>
+        <select id="char-background" class="cb-m">
+          <option *ngFor="let background of backgrounds" value="{{ background.name }}">{{ background.name }}</option>
+        </select>
+      </div>
+      <span>Background</span>
+    </div>
+
+    <div class="rw-2">
+      <div>
+        <input type="text" name="char-player" id="char-player" placeholder="Player name">
+      </div>
+      <span>Player Name</span>
+    </div>
+
+    <div class="rw-2">
+      <div>
+        <select id="char-race" class="cb-m">
+          <option *ngFor="let race of races" value="{{ race.name }}">{{ race.name }}</option>
+        </select>
+      </div>
+      <span>Race</span>
+    </div>
+
+    <div class="rw-2">
+      <div>
+        <select id="char-alignment" class="cb-m">
+          <option *ngFor="let alignment of alignments" value="{{ alignment.name }}">{{ alignment.name }}</option>
+        </select>
+      </div>
+      <span>Alignment</span>
+    </div>
+
+    <div class="rw-2">
+      <div>
+        <input type="text" name="char-exp" id="char-exp" placeholder="Experience Points">
+      </div>
+      <span>Experience Points</span>
+    </div>
+
   </div>
 </div>

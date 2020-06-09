@@ -1,83 +1,83 @@
-<div class="cl-1 rw-a" id="attributes">
+<div class="cl-1 gap-8" id="attributes">
   <button class="bt-s" (click)="randomizeAll()">
     <i class="fas fa-dice-d20"></i>
   </button>
 
-  <div class="rw-2 mx-h">
-    <div class="cl-f">
+  <div class="rw-1">
+    <div class="mx-h">
       <button class="bt-s" (click)="randomizeAttribute('str')">
         <i class="fas fa-dice"></i>
       </button>
       <input [(ngModel)]="attributes.str" type="number" name="char-str" id="char-str" class="char-attr">
-    </div>
-    <div class="att-info">
-      <label for="char-str">Strength: </label>
-      <span *ngIf="calculateMod(attributes.str, 'str') > 0">+</span>{{ attribMods.str }}
+      <div class="att-info">
+        <label for="char-str">Strength: </label>
+        <span *ngIf="calculateMod(attributes.str, 'str') > 0">+</span>{{ attribMods.str }}
+      </div>
     </div>
   </div>
 
-  <div class="rw-2 mx-h">
-    <div class="cl-f">
+  <div class="rw-1">
+    <div class="mx-h">
       <button class="bt-s" (click)="randomizeAttribute('dex')">
         <i class="fas fa-dice"></i>
       </button>
       <input [(ngModel)]="attributes.dex" type="number" name="char-dex" id="char-dex" class="char-attr">
-    </div>
-    <div class="att-info">
-      <label for="char-dex">Dexterity: </label>
-      <span *ngIf="calculateMod(attributes.dex, 'dex') > 0">+</span>{{ attribMods.dex }}
+      <div class="att-info">
+        <label for="char-dex">Dexterity: </label>
+        <span *ngIf="calculateMod(attributes.dex, 'dex') > 0">+</span>{{ attribMods.dex }}
+      </div>
     </div>
   </div>
 
-  <div class="rw-2 mx-h">
-    <div class="cl-f">
+  <div class="rw-1">
+    <div class="mx-h">
       <button class="bt-s" (click)="randomizeAttribute('con')">
         <i class="fas fa-dice"></i>
       </button>
       <input [(ngModel)]="attributes.con" type="number" name="char-con" id="char-con" class="char-attr">
-    </div>
-    <div class="att-info">
-      <label for="char-con">Constitution: </label>
-      <span *ngIf="calculateMod(attributes.con, 'con') > 0">+</span>{{ attribMods.con }}
+      <div class="att-info">
+        <label for="char-con">Constitution: </label>
+        <span *ngIf="calculateMod(attributes.con, 'con') > 0">+</span>{{ attribMods.con }}
+      </div>
     </div>
   </div>
 
-  <div class="rw-2 mx-h">
-    <div class="cl-f">
+  <div class="rw-1">
+    <div class="mx-h">
       <button class="bt-s" (click)="randomizeAttribute('int')">
         <i class="fas fa-dice"></i>
       </button>
       <input [(ngModel)]="attributes.int" type="number" name="char-int" id="char-int" class="char-attr">
-    </div>
-    <div class="att-info">
-      <label for="char-int">Intelligence: </label>
-      <span *ngIf="calculateMod(attributes.int, 'int') > 0">+</span>{{ attribMods.int }}
+      <div class="att-info">
+        <label for="char-int">Intelligence: </label>
+        <span *ngIf="calculateMod(attributes.int, 'int') > 0">+</span>{{ attribMods.int }}
+      </div>
     </div>
   </div>
 
-  <div class="rw-2 mx-h">
-    <div class="cl-f">
+  <div class="rw-1">
+    <div class="mx-h">
       <button class="bt-s" (click)="randomizeAttribute('wis')">
         <i class="fas fa-dice"></i>
       </button>
       <input [(ngModel)]="attributes.wis" type="number" name="char-wis" id="char-wis" class="char-attr">
-    </div>
-    <div class="att-info">
-      <label for="char-wis">Wisdom: </label>
-      <span *ngIf="calculateMod(attributes.wis, 'wis') > 0">+</span>{{ attribMods.wis }}
+      <div class="att-info">
+        <label for="char-wis">Wisdom: </label>
+        <span *ngIf="calculateMod(attributes.wis, 'wis') > 0">+</span>{{ attribMods.wis }}
+      </div>
     </div>
   </div>
 
-  <div class="rw-2 mx-h">
-    <div class="cl-f">
+  <div class="rw-1">
+    <div class="mx-h">
       <button class="bt-s" (click)="randomizeAttribute('chr')">
         <i class="fas fa-dice"></i>
       </button>
       <input [(ngModel)]="attributes.chr" type="number" name="char-chr" id="char-chr" class="char-attr">
-    </div>
-    <div class="att-info">
-      <label for="char-chr">Charisma: </label>
-      <span *ngIf="calculateMod(attributes.chr, 'chr') > 0">+</span>{{ attribMods.chr }}
+      <div class="att-info">
+        <label for="char-chr">Charisma: </label>
+        <span *ngIf="calculateMod(attributes.chr, 'chr') > 0">+</span>{{ attribMods.chr }}
+      </div>
     </div>
   </div>
 </div>
