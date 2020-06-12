@@ -1,5 +1,7 @@
 <div class="content">
-    <app-char-header style="padding-bottom: 8px;"></app-char-header>
+    <app-char-header
+      (charNameEvent)="receiveCharName($event)"
+      ></app-char-header>
     <button type="button" class="bt-s" (click)="printSheet()"></button>
     <div class="cl-3">
       <div class="cl-2">

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-char-header',
@@ -11,6 +11,23 @@ export class CharHeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  @Output() charNameEvent = new EventEmitter<string>();
+
+  sendCharName(value: string) {
+    setTimeout(() => {
+      if(this.characterName === value) {
+        this.charNameEvent.emit(this.characterName);
+      }
+    }, 1000);
+
+  }
+
+  characterName = '';
+
+  playerName = '';
+
+  experience = 0;
 
   classes = [
     { name: 'Barbarian' },

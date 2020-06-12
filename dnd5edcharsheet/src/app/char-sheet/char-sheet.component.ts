@@ -21,6 +21,25 @@ export class CharSheetComponent implements OnInit {
     experience: 0,
     attributes: {},
     attributeModifiers: {},
+    inspiration: 0,
+    proficiencyBonus: 0,
+    savingThrows: {},
+    skills: {},
+    passiveWisdom: 0,
+    armorClass: 0,
+    initiative: 0,
+    speed: 0,
+    hitPoints: {},
+    hitDice: '',
+    deathSaves: {},
+    personality: '',
+    ideals: '',
+    bonds: '',
+    flaws: '',
+    attacks: {},
+    proficiencies: {},
+    equipment: {},
+    features: {}
   }
 
   constructor() {
@@ -36,6 +55,10 @@ export class CharSheetComponent implements OnInit {
 
   receiveMods($event: object) {
     this.characterSheet.attributeModifiers = $event;
+  }
+
+  receiveCharName($event: string) {
+    this.characterSheet.characterName = $event;
   }
 
   printSheet(){

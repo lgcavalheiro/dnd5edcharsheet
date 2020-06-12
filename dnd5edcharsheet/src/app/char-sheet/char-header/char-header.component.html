@@ -1,6 +1,8 @@
 <div class="sheet-header rw-1 cl-2">
   <div class="rw-2 ta-c">
-    <input type="text" name="char-name" id="char-name" placeholder="Name thy character">
+    <input type="text" [(ngModel)]="characterName" #ctrl="ngModel" required
+      (input)="sendCharName($event.target.value)" name="char-name" id="char-name"
+      placeholder="Name thy character">
     <label for="char-name">Character Name</label>
   </div>
 
