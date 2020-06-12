@@ -10,8 +10,18 @@ import { CharHeaderComponent } from './char-header/char-header.component';
 })
 export class CharSheetComponent implements OnInit {
 
-  attributes: object;
-  attribMods: object;
+  characterSheet = {
+    characterName: '',
+    characterClass: '',
+    level: 0,
+    background: '',
+    playerName: '',
+    characterRace: '',
+    alignment: '',
+    experience: 0,
+    attributes: {},
+    attributeModifiers: {},
+  }
 
   constructor() {
 
@@ -21,11 +31,15 @@ export class CharSheetComponent implements OnInit {
   }
 
   receiveAttributes($event: object) {
-    this.attributes = $event;
+    this.characterSheet.attributes = $event;
   }
 
   receiveMods($event: object) {
-    this.attribMods = $event;
+    this.characterSheet.attributeModifiers = $event;
+  }
+
+  printSheet(){
+    console.log(this.characterSheet);
   }
 
 }
