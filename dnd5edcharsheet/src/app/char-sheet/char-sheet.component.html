@@ -1,8 +1,8 @@
 <div class="content">
     <app-char-header
-      (charNameEvent)="receiveCharName($event)"
+      (charDataEvent)="receiveCharData($event)"
       ></app-char-header>
-    <button type="button" class="bt-s" (click)="printSheet()"></button>
+    <button type="button" class="bt-s" (click)="printSheet()">[TEST] PRINT SHEET</button>
     <div class="cl-3">
       <div class="cl-2">
         <app-char-attributes

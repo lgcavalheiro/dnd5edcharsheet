@@ -1,7 +1,7 @@
 <div class="sheet-header rw-1 cl-2">
   <div class="rw-2 ta-c">
     <input type="text" [(ngModel)]="characterName" #ctrl="ngModel" required
-      (input)="sendCharName($event.target.value)" name="char-name" id="char-name"
+      (input)="sendTimedCharData('characterName', $event.target.value)" name="char-name" id="char-name"
       placeholder="Name thy character">
     <label for="char-name">Character Name</label>
   </div>
@@ -10,9 +10,11 @@
     <div class="rw-2">
       <div>
         <select id="char-class" class="cb-s">
-          <option *ngFor="let class of classes" value="{{ class.name }}">{{ class.name }}</option>
+          <option *ngFor="let class of classes" value="{{ class.name }}"
+            (click)="sendCharData('characterClass', $event.target.value)">{{ class.name }}</option>
         </select>
-        <input type="number" name="char-class" id="char-class" class="char-attr" min="1" max="20" value="1">
+        <input type="number" name="char-class" id="char-class" class="char-attr"
+          min="1" max="20" value="1" (input)="sendCharData('level', $event.target.value)">
       </div>
       <span>Class & Level</span>
     </div>
@@ -20,7 +22,8 @@
     <div class="rw-2">
       <div>
         <select id="char-background" class="cb-m">
-          <option *ngFor="let background of backgrounds" value="{{ background.name }}">{{ background.name }}</option>
+          <option *ngFor="let background of backgrounds" value="{{ background.name }}"
+            (click)="sendCharData('background', $event.target.value)">{{ background.name }}</option>
         </select>
       </div>
       <span>Background</span>
@@ -28,7 +31,8 @@
 
     <div class="rw-2">
       <div>
-        <input type="text" name="char-player" id="char-player" placeholder="Player name">
+        <input type="text" name="char-player" id="char-player" [(ngModel)]="playerName" #ctrl="ngModel" required
+          placeholder="Player name" (input)="sendTimedCharData('playerName', $event.target.value)">
       </div>
       <span>Player Name</span>
     </div>
@@ -36,7 +40,8 @@
     <div class="rw-2">
       <div>
         <select id="char-race" class="cb-m">
-          <option *ngFor="let race of races" value="{{ race.name }}">{{ race.name }}</option>
+          <option *ngFor="let race of races" value="{{ race.name }}"
+            (click)="sendCharData('characterRace', $event.target.value)">{{ race.name }}</option>
         </select>
       </div>
       <span>Race</span>
@@ -45,7 +50,8 @@
     <div class="rw-2">
       <div>
         <select id="char-alignment" class="cb-m">
-          <option *ngFor="let alignment of alignments" value="{{ alignment.name }}">{{ alignment.name }}</option>
+          <option *ngFor="let alignment of alignments" value="{{ alignment.name }}"
+            (click)="sendCharData('alignment', $event.target.value)">{{ alignment.name }}</option>
         </select>
       </div>
       <span>Alignment</span>
@@ -53,7 +59,8 @@
 
     <div class="rw-2">
       <div>
-        <input type="text" name="char-exp" id="char-exp" placeholder="Experience Points">
+        <input type="text" name="char-exp" id="char-exp" [(ngModel)]="experience" #ctrl="ngModel" required
+          placeholder="Experience Points" (input)="sendTimedCharData('experience', $event.target.value)">
       </div>
       <span>Experience Points</span>
     </div>

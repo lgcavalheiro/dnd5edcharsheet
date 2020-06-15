@@ -57,8 +57,8 @@ export class CharSheetComponent implements OnInit {
     this.characterSheet.attributeModifiers = $event;
   }
 
-  receiveCharName($event: string) {
-    this.characterSheet.characterName = $event;
+  receiveCharData($event: any) {
+    this.characterSheet[$event.key] = $event.value;
   }
 
   printSheet(){

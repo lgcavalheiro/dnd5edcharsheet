@@ -7,20 +7,24 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class CharHeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
-  @Output() charNameEvent = new EventEmitter<string>();
+  @Output() charDataEvent = new EventEmitter<object>();
 
-  sendCharName(value: string) {
+  sendTimedCharData(key: string, value: any) {
     setTimeout(() => {
-      if(this.characterName === value) {
-        this.charNameEvent.emit(this.characterName);
+      if(this[key] === value) {
+        this.charDataEvent.emit({ key, value: this[key]});
       }
     }, 1000);
+  }
 
+  sendCharData(key: string, value: any) {
+    this.charDataEvent.emit({key, value});
   }
 
   characterName = '';

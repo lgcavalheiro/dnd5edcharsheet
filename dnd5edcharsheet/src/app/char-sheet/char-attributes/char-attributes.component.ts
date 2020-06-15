@@ -27,6 +27,7 @@ export class CharAttributesComponent implements OnInit {
 
     @Output() attributeEvent = new EventEmitter<object>();
     @Output() modEvent = new EventEmitter<object>();
+    @Output() charDataEvent = new EventEmitter<object>();
 
     calculateMod(value: number, mod: string) {
       let calc = Math.floor((value/2) - 5);
